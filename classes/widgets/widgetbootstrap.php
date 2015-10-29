@@ -17,7 +17,6 @@ class PeepSoBOOTSTRAPWidgetBOOTSTRAP extends WP_Widget
 		);
 	}
 
-
 	public function widget( $args, $instance ) {
 
 		$view_id = NULL;
@@ -37,32 +36,13 @@ class PeepSoBOOTSTRAPWidgetBOOTSTRAP extends WP_Widget
 			$view_id = get_current_user_id();
 		}
 
-		// actually friends code, for the record
-
-		$instance['template'] = 'friends.tpl';
-
-
 		if (!array_key_exists('user_id', $instance)) {
 			$instance['user_id'] = $view_id;
 		}
 
-		if (!array_key_exists('search_args', $instance)) {
-			$instance['search_args'] = array(
-				'number' => $instance['limit'],
-			);
-		}
+		$instance['BOOTSTRAP'] = 'BOOTSTRAP'; // some date
 
-		// @TODO guest should be able to see the friends of another person if privacy allows it
-		if (!$instance['user_id']) {
-			return false;
-		}
-
-		if (!array_key_exists('list', $instance)) {
-			$friendsModel = PeepSoFriendsModel::get_instance();
-			$instance['list'] = $friendsModel->get_friends($instance['user_id'], $instance['search_args']);
-		}
-
-		PeepSoTemplate::exec_template( 'widgets', $instance['template'], array( 'args'=>$args, 'instance' => $instance ) );
+		PeepSoTemplate::exec_template( 'widgets', 'bootstrap.tpl', array( 'args'=>$args, 'instance' => $instance ) );
 	}
 
 	/**
