@@ -23,6 +23,10 @@ class PeepSoBOOTSTRAP
 	const PLUGIN_VERSION = '1.0.0';
 	const PLUGIN_RELEASE = ''; //ALPHA1, BETA1, RC1, '' for STABLE
 
+	public $widgets = array(
+		'PeepSoBOOTSTRAPWidgetBOOTSTRAP',
+	);
+
 	private function __construct()
 	{
 		add_action('peepso_init', array(&$this, 'init'));
@@ -49,6 +53,8 @@ class PeepSoBOOTSTRAP
 		} else {
 			add_action('wp_enqueue_scripts', array(&$this, 'enqueue_scripts'));
 		}
+
+		add_filter('peepso_widgets', array(&$this, 'register_widgets'));
 	}
 
 
@@ -103,6 +109,15 @@ class PeepSoBOOTSTRAP
 	{
 		wp_enqueue_style('BOOTSTRAP', plugin_dir_url(__FILE__) . 'assets/BOOTSTRAP.css', array('peepso'), self::PLUGIN_VERSION, 'all');
 		wp_enqueue_script('BOOTSTRAP', plugin_dir_url(__FILE__) . 'assets/BOOTSTRAP.js', array('peepso'), self::PLUGIN_VERSION, TRUE);
+	}
+
+	public function register_widgets($widgets)
+	{
+		foreach (scandir($widget_dir = dirname(__FILE__) . DIRECTORY_SEPARATOR . 'classes' . DIRECTORY_SEPARATOR . 'widgets' . DIRECTORY_SEPARATOR) as $widget) {
+			if (strlen($widget)>=5) require_once($widget_dir . $widget);
+		}
+
+		return array_merge($widgets, $this->widgets);
 	}
 }
 
