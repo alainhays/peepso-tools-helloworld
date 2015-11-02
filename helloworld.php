@@ -9,23 +9,23 @@
  * Copyright: (c) 2015 PeepSo All Rights Reserved.
  * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: peepsohello
+ * Text Domain: peepsohelloworld
  * Domain Path: /language
  *
  * This software contains GPLv2 or later software courtesy of PeepSo.com, Inc
  *
- * PeepSoHello is free software: you can redistribute it and/or modify
+ * PeepSoHelloWorld is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 2 of the License, or
  * any later version.
  *
- * PeepSoHello is distributed in the hope that it will be useful,
+ * PeepSoHelloWorld is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY. See the
  * GNU General Public License for more details.
  */
 
 
-class PeepSoHello
+class PeepSoHelloWorld
 {
 	private static $_instance = NULL;
 
@@ -33,7 +33,7 @@ class PeepSoHello
 	const PLUGIN_RELEASE = ''; //ALPHA1, BETA1, RC1, '' for STABLE
 
 	public $widgets = array(
-		'PeepSoHelloWidgetHello',
+		'PeepSoHelloworldWidgetHelloworld',
 	);
 
 	private function __construct()
@@ -125,8 +125,8 @@ class PeepSoHello
 
 	public function enqueue_scripts()
 	{
-		wp_enqueue_style('peepsohello', plugin_dir_url(__FILE__) . 'assets/hello.css', array('peepso'), self::PLUGIN_VERSION, 'all');
-		wp_enqueue_script('peepsohello', plugin_dir_url(__FILE__) . 'assets/hello.js', array('peepso'), self::PLUGIN_VERSION, TRUE);
+		wp_enqueue_style('peepsohelloworld', plugin_dir_url(__FILE__) . 'assets/helloworld.css', array('peepso'), self::PLUGIN_VERSION, 'all');
+		wp_enqueue_script('peepsohelloworld', plugin_dir_url(__FILE__) . 'assets/helloworld.js', array('peepso'), self::PLUGIN_VERSION, TRUE);
 	}
 
 	public function register_widgets($widgets)
@@ -154,8 +154,8 @@ class PeepSoHello
 	public function admin_dashboard_tabs( $tabs )
 	{
 		$tabs['red']['helloworld'] = array(
-			'slug' => 'peepso-hello',
-			'menu' => __('Hello World', 'peepsohello'),
+			'slug' => 'peepso-hello-world',
+			'menu' => __('Hello World', 'peepsohelloworld'),
 			'icon' => 'info',
 			'function' => array(&$this, 'admin_page'),
 		);
@@ -173,10 +173,10 @@ class PeepSoHello
 	public function admin_config_tabs( $tabs )
 	{
 		$tabs['helloworld'] = array(
-			'label' => __('Hello World Tab', 'peepsohello'),
+			'label' => __('Hello World Tab', 'peepsohelloworld'),
 			'tab' => 'helloworld',
-			'description' => __('Example Config Tab', 'peepsohello'),
-			'function' => 'PeepSoConfigSectionHello',
+			'description' => __('Example Config Tab', 'peepsohelloworld'),
+			'function' => 'PeepSoConfigSectionHelloworld',
 		);
 
 		return $tabs;
@@ -186,11 +186,6 @@ class PeepSoHello
 	public function admin_page()
 	{
 		echo "Hello World Page!";
-	}
-
-	public function admin_tab()
-	{
-		echo "Hello World Tab!";
 	}
 }
 

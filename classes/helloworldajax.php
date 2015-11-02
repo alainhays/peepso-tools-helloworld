@@ -1,6 +1,6 @@
 <?php
 
-class PeepSoHelloAjax implements PeepSoAjaxCallback
+class PeepSoHelloworldAjax implements PeepSoAjaxCallback
 {
 	private static $_instance = NULL;
 
