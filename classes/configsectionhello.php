@@ -33,7 +33,7 @@ class PeepSoConfigSectionHello extends PeepSoConfigSectionAbstract
 		);
 
 		$this->set_group(
-			'ps_helloworld_world',
+			'peepso_helloworld_hello',
 			__('Hello', 'peepsohelloworld')
 		);
 	}
@@ -43,22 +43,19 @@ class PeepSoConfigSectionHello extends PeepSoConfigSectionAbstract
 
 		// # Message Custom Greeting
 		$this->set_field(
-			'ps_helloworld_description',
-			__('Put a custom greeting message here', 'peepsohello'),
+			'peepso_helloworld_description',
+			__('Put a custom greeting message here', 'peepsohelloworld'),
 			'message'
 		);
 
-		// # Custom Greeting
-		$this->args('default', __('Hello World!', 'peepsohelloworld'));
-
 		$this->set_field(
-			'ps_helloworld_custom',
+			'peepso_helloworld_custom_message',
 			__('Custom Greeting', 'peepsohelloworld'),
 			'text'
 		);
 
 		$this->set_group(
-			'filesystem',
+			'peepso_helloworld_world',
 			__('World', 'peepsohelloworld')
 		);
 	}
