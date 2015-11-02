@@ -1,11 +1,11 @@
 <?php
 /**
- * Plugin Name: PeepSoHello
+ * Plugin Name: PeepSoHelloWorld
  * Plugin URI: https://peepso.com
- * Description: hello
+ * Description: Plugin template for development of PeepSo addons
  * Author: PeepSo
  * Author URI: https://peepso.com
- * Version: 1.0.0
+ * Version: 1.4.2
  * Copyright: (c) 2015 PeepSo All Rights Reserved.
  * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -29,7 +29,7 @@ class PeepSoHello
 {
 	private static $_instance = NULL;
 
-	const PLUGIN_VERSION = '1.0.0';
+	const PLUGIN_VERSION = '1.4.2';
 	const PLUGIN_RELEASE = ''; //ALPHA1, BETA1, RC1, '' for STABLE
 
 	public $widgets = array(
@@ -59,9 +59,13 @@ class PeepSoHello
 	{
 		if (is_admin()) {
 			add_action('admin_init', array(&$this, 'check_peepso'));
+			add_filter('peepso_admin_dashboard_tabs', array(&$this,'admin_dashboard_tabs'));
 		} else {
 			add_action('wp_enqueue_scripts', array(&$this, 'enqueue_scripts'));
 		}
+
+		PeepSo::add_autoload_directory(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'classes' . DIRECTORY_SEPARATOR);
+		PeepSoTemplate::add_template_directory(plugin_dir_path(__FILE__));
 
 		add_filter('peepso_widgets', array(&$this, 'register_widgets'));
 	}
@@ -114,6 +118,18 @@ class PeepSoHello
 		echo '</div>';
 	}
 
+	public function admin_dashboard_tabs( $tabs )
+	{
+		$tabs['red']['hello'] = array(
+					'slug' => 'peepso-hello',
+					'menu' => __('Hello World', 'peepsohello'),
+					'icon' => 'info',
+					'function' => array(&$this, 'admin_page'),
+				);
+
+		return $tabs;
+	}
+
 	public function enqueue_scripts()
 	{
 		wp_enqueue_style('peepsohello', plugin_dir_url(__FILE__) . 'assets/hello.css', array('peepso'), self::PLUGIN_VERSION, 'all');
@@ -127,6 +143,19 @@ class PeepSoHello
 		}
 
 		return array_merge($widgets, $this->widgets);
+	}
+
+
+	// Admin Panel
+
+	public function admin_page()
+	{
+		echo "Hello World Page!";
+	}
+
+	public function admin_tab()
+	{
+		echo "Hello World Tab!";
 	}
 }
 

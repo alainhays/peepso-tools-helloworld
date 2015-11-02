@@ -13,7 +13,7 @@ class PeepSoHelloInstall extends PeepSoInstall
 	{
 		// Set some settings
 		$settings = PeepSoConfigSettings::get_instance();
-		#$settings->set_option('page_friends', 'friends');
+		#$settings->set_option('page_helloworld', 'helloworld');
 
 		parent::plugin_activation();
 
@@ -32,7 +32,7 @@ class PeepSoHelloInstall extends PeepSoInstall
 				) ENGINE=InnoDB",
 		);
 
-		# return $aRet;
+		 return $aRet;
 	}
 
 	// optional notification emails
@@ -42,7 +42,7 @@ class PeepSoHelloInstall extends PeepSoInstall
 			'email_hello' => "Hello World!",
 		);
 
-		# return $emails;
+		 return $emails;
 	}
 
 	// optional page with shortcode
@@ -57,6 +57,6 @@ class PeepSoHelloInstall extends PeepSoInstall
 			),
 		);
 
-		#return ($aRet);
+		return ($aRet);
 	}
 }
