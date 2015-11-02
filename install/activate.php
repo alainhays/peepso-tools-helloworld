@@ -1,12 +1,12 @@
 <?php
 require_once(PeepSo::get_plugin_dir() . DIRECTORY_SEPARATOR . 'lib' . DIRECTORY_SEPARATOR . 'install.php');
 
-class PeepSoBOOTSTRAPInstall extends PeepSoInstall
+class PeepSoHelloInstall extends PeepSoInstall
 {
 
 	// optional default settings
 	protected $default_config = array(
-		#'BOOTSTRAP_BOOTSTRAP' => '100',
+		#'HELLO_WORLD' => '100',
 	);
 
 	public function plugin_activation()
@@ -24,11 +24,11 @@ class PeepSoBOOTSTRAPInstall extends PeepSoInstall
 	public static function get_table_data()
 	{
 		$aRet = array(
-			'BOOTSTRAP' => "
-				CREATE TABLE `BOOTSTRAP` (
-					`BOOTSTRAP_id`				BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+			'hello' => "
+				CREATE TABLE `hello` (
+					`hello_id`				BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
 
-					PRIMARY KEY (`BOOTSTRAP_id`),
+					PRIMARY KEY (`hello_id`),
 				) ENGINE=InnoDB",
 		);
 
@@ -39,7 +39,7 @@ class PeepSoBOOTSTRAPInstall extends PeepSoInstall
 	public function get_email_contents()
 	{
 		$emails = array(
-			'email_BOOTSTRAP' => "BOOTSTRAP",
+			'email_hello' => "Hello World!",
 		);
 
 		# return $emails;
@@ -50,10 +50,10 @@ class PeepSoBOOTSTRAPInstall extends PeepSoInstall
 	{
 		// default page names/locations
 		$aRet = array(
-			'BOOTSTRAP' => array(
-				'title' => __('BOOTSTRAP', 'msgso'),
-				'slug' => 'BOOTSTRAP',
-				'content' => '[peepso_BOOTSTRAP]'
+			'hello' => array(
+				'title' => __('Hello', 'peepsohello'),
+				'slug' => 'Hello World',
+				'content' => '[peepso_hello]'
 			),
 		);
 

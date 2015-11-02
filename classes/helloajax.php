@@ -1,6 +1,6 @@
 <?php
 
-class PeepSoBOOTSTRAPAjax implements PeepSoAjaxCallback
+class PeepSoHelloAjax implements PeepSoAjaxCallback
 {
 	private static $_instance = NULL;
 
@@ -14,7 +14,7 @@ class PeepSoBOOTSTRAPAjax implements PeepSoAjaxCallback
 		return (self::$_instance);
 	}
 
-	public function BOOTSTRAP(PeepSoAjaxResponse $resp)
+	public function hello(PeepSoAjaxResponse $resp)
 	{
 		$peepsoInput = new PeepSoInput();
 		#$peepsoActivity = PeepSoActivity::get_instance();
@@ -22,10 +22,10 @@ class PeepSoBOOTSTRAPAjax implements PeepSoAjaxCallback
 		#$user_id = PeepSo::get_user_id();
 		#$peepsoActivity->set_user_id($user_id);
 
-		$BOOTSTRAP = $peepsoInput->get_int('BOOTSTRAP', 'BOOTSTRAP');
+		$hello = $peepsoInput->get_int('hello', 'hello');
 
 
 		$resp->success(TRUE);
-		$resp->set('BOOTSTRAP', $BOOTSTRAP);
+		$resp->set('hello', $hello);
 	}
 }

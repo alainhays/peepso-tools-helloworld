@@ -1,14 +1,14 @@
 <?php
 
 
-class PeepSoBOOTSTRAPWidgetBOOTSTRAP extends WP_Widget
+class PeepSoHelloWidgetHello extends WP_Widget
 {
 
 	public function __construct( $id = NULL, $name = NULL, $args= NULL ) {
 
-		$id     = ( NULL !== $id )  ? $id   : 'PeepSoBOOTSTRAPWidgetBOOTSTRAP';
-		$name   = ( NULL !== $name )? $name : __('PeepSo BOOTSTRAP', 'peepsoBOOTSTRAP');
-		$args   = ( NULL !== $args )? $args : array('description' => __('BOOTSTRAP', 'peepsoBOOTSTRAP'),);
+		$id     = ( NULL !== $id )  ? $id   : 'PeepSoHelloWidgetHello';
+		$name   = ( NULL !== $name )? $name : __('PeepSo Hello World', 'peepsohello');
+		$args   = ( NULL !== $args )? $args : array('description' => __('Hello World!', 'peepsohello'),);
 
 		parent::__construct(
 			$id,
@@ -40,9 +40,9 @@ class PeepSoBOOTSTRAPWidgetBOOTSTRAP extends WP_Widget
 			$instance['user_id'] = $view_id;
 		}
 
-		$instance['BOOTSTRAP'] = 'BOOTSTRAP'; // some date
+		$instance['hello'] = 'hello';
 
-		PeepSoTemplate::exec_template( 'widgets', 'bootstrap.tpl', array( 'args'=>$args, 'instance' => $instance ) );
+		PeepSoTemplate::exec_template( 'widgets', 'hello.tpl', array( 'args'=>$args, 'instance' => $instance ) );
 	}
 
 	/**

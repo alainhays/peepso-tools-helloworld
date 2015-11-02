@@ -1,22 +1,31 @@
 <?php
 /**
- * Plugin Name: PeepSoBOOTSTRAP
- * Plugin URI: https://jwr.sk
- * Description: BOOTSTRAP
- * Author: Matt Jaworski
- * Author URI: https://jwr.sk
+ * Plugin Name: PeepSoHello
+ * Plugin URI: https://peepso.com
+ * Description: hello
+ * Author: PeepSo
+ * Author URI: https://peepso.com
  * Version: 1.0.0
- * Copyright: (c) 2015 Matt Jaworski All Rights Reserved.
+ * Copyright: (c) 2015 PeepSo All Rights Reserved.
  * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: BOOTSTRAP
+ * Text Domain: peepsohello
  * Domain Path: /language
  *
  * This software contains GPLv2 or later software courtesy of PeepSo.com, Inc
  *
+ * PeepSoHello is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 2 of the License, or
+ * any later version.
+ *
+ * PeepSoHello is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY. See the
+ * GNU General Public License for more details.
  */
 
-class PeepSoBOOTSTRAP
+
+class PeepSoHello
 {
 	private static $_instance = NULL;
 
@@ -24,7 +33,7 @@ class PeepSoBOOTSTRAP
 	const PLUGIN_RELEASE = ''; //ALPHA1, BETA1, RC1, '' for STABLE
 
 	public $widgets = array(
-		'PeepSoBOOTSTRAPWidgetBOOTSTRAP',
+		'PeepSoHelloWidgetHello',
 	);
 
 	private function __construct()
@@ -84,7 +93,7 @@ class PeepSoBOOTSTRAP
 		}
 
 		require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'install' . DIRECTORY_SEPARATOR . 'activate.php');
-		$install = new PeepSoBOOTSTRAPInstall();
+		$install = new PeepSoHelloInstall();
 		$res = $install->plugin_activation();
 		if (FALSE === $res) {
 			// error during installation - disable
@@ -107,8 +116,8 @@ class PeepSoBOOTSTRAP
 
 	public function enqueue_scripts()
 	{
-		wp_enqueue_style('BOOTSTRAP', plugin_dir_url(__FILE__) . 'assets/BOOTSTRAP.css', array('peepso'), self::PLUGIN_VERSION, 'all');
-		wp_enqueue_script('BOOTSTRAP', plugin_dir_url(__FILE__) . 'assets/BOOTSTRAP.js', array('peepso'), self::PLUGIN_VERSION, TRUE);
+		wp_enqueue_style('peepsohello', plugin_dir_url(__FILE__) . 'assets/hello.css', array('peepso'), self::PLUGIN_VERSION, 'all');
+		wp_enqueue_script('peepsohello', plugin_dir_url(__FILE__) . 'assets/hello.js', array('peepso'), self::PLUGIN_VERSION, TRUE);
 	}
 
 	public function register_widgets($widgets)
@@ -121,6 +130,6 @@ class PeepSoBOOTSTRAP
 	}
 }
 
-PeepSoBOOTSTRAP::get_instance();
+PeepSoHello::get_instance();
 
 // EOF

@@ -2,7 +2,7 @@
 
 echo $args['before_widget'];
 
-echo $instance['BOOTSTRAP'];
+echo $instance['hello'];
 
 echo $args['after_widget'];
 
