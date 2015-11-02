@@ -57,15 +57,18 @@ class PeepSoHello
 
 	public function init()
 	{
+		PeepSo::add_autoload_directory(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'classes' . DIRECTORY_SEPARATOR);
+		PeepSoTemplate::add_template_directory(plugin_dir_path(__FILE__));
+
 		if (is_admin()) {
 			add_action('admin_init', array(&$this, 'check_peepso'));
 			add_filter('peepso_admin_dashboard_tabs', array(&$this,'admin_dashboard_tabs'));
+			add_filter('peepso_admin_config_tabs', array(&$this, 'admin_config_tabs'));
 		} else {
 			add_action('wp_enqueue_scripts', array(&$this, 'enqueue_scripts'));
 		}
 
-		PeepSo::add_autoload_directory(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'classes' . DIRECTORY_SEPARATOR);
-		PeepSoTemplate::add_template_directory(plugin_dir_path(__FILE__));
+
 
 		add_filter('peepso_widgets', array(&$this, 'register_widgets'));
 	}
@@ -118,17 +121,7 @@ class PeepSoHello
 		echo '</div>';
 	}
 
-	public function admin_dashboard_tabs( $tabs )
-	{
-		$tabs['red']['hello'] = array(
-					'slug' => 'peepso-hello',
-					'menu' => __('Hello World', 'peepsohello'),
-					'icon' => 'info',
-					'function' => array(&$this, 'admin_page'),
-				);
 
-		return $tabs;
-	}
 
 	public function enqueue_scripts()
 	{
@@ -146,8 +139,50 @@ class PeepSoHello
 	}
 
 
-	// Admin Panel
+	/*
+	 * Methods below are used solely as an integration with the PeepSo admin section
+	 */
 
+
+	/**
+	 * Register an option to the PeepSo admin sidebar menu
+	 * PS_FILTER
+	 *
+	 * @param $tabs array
+	 * @return array
+	 */
+	public function admin_dashboard_tabs( $tabs )
+	{
+		$tabs['red']['helloworld'] = array(
+			'slug' => 'peepso-hello',
+			'menu' => __('Hello World', 'peepsohello'),
+			'icon' => 'info',
+			'function' => array(&$this, 'admin_page'),
+		);
+
+		return $tabs;
+	}
+
+	/**
+	 * Registers a tab in the PeepSo Config Toolbar
+	 * PS_FILTER
+	 *
+	 * @param $tabs array
+	 * @return array
+	 */
+	public function admin_config_tabs( $tabs )
+	{
+		$tabs['helloworld'] = array(
+			'label' => __('Hello World Tab', 'peepsohello'),
+			'tab' => 'helloworld',
+			'description' => __('Example Config Tab', 'peepsohello'),
+			'function' => 'PeepSoConfigSectionHello',
+		);
+
+		return $tabs;
+	}
+
+	// @todo move to a separate class
 	public function admin_page()
 	{
 		echo "Hello World Page!";
