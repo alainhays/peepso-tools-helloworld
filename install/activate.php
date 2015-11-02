@@ -29,8 +29,8 @@ class PeepSoHelloInstall extends PeepSoInstall
 	{
 		$aRet = array(
 			'hello' => "
-				CREATE TABLE `hello` (
-					`hello_id`				BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
+				CREATE TABLE `helloworld` (
+					`hlw_id`				BIGINT(20) UNSIGNED NOT NULL AUTO_INCREMENT,
 
 					PRIMARY KEY (`hello_id`),
 				) ENGINE=InnoDB",
@@ -43,7 +43,7 @@ class PeepSoHelloInstall extends PeepSoInstall
 	public function get_email_contents()
 	{
 		$emails = array(
-			'email_hello' => "Hello World!",
+			'email_helloworld' => "Hello World!",
 		);
 
 		 return $emails;
@@ -55,8 +55,8 @@ class PeepSoHelloInstall extends PeepSoInstall
 		// default page names/locations
 		$aRet = array(
 			'hello' => array(
-				'title' => __('Hello', 'peepsohello'),
-				'slug' => 'Hello World',
+				'title' => __('PeepSo Hello World', 'peepsohello'),
+				'slug' => 'helloworld',
 				'content' => '[peepso_hello]'
 			),
 		);
