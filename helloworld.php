@@ -25,7 +25,7 @@
  */
 
 
-class PeepSoHelloWorld
+class PeepSoHelloworld
 {
 	private static $_instance = NULL;
 
@@ -189,6 +189,6 @@ class PeepSoHelloWorld
 	}
 }
 
-PeepSoHello::get_instance();
+PeepSoHelloworld::get_instance();
 
 // EOF
