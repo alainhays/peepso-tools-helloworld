@@ -9,7 +9,7 @@ class PeepSoHelloInstall extends PeepSoInstall
 		#'HELLO_WORLD' => '100',
 	);
 
-	public function plugin_activation()
+	public function plugin_activation( $is_core = FALSE )
 	{
 		// Set some default settings
 		$settings = PeepSoConfigSettings::get_instance();
@@ -19,7 +19,7 @@ class PeepSoHelloInstall extends PeepSoInstall
 		$settings->set_option('peepso_helloworld_align', 'left');
 
 
-		parent::plugin_activation();
+		parent::plugin_activation($is_core);
 
 		return (TRUE);
 	}
