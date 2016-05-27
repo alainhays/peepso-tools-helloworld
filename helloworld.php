@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: PeepSoHelloWorld
+ * Plugin Name: PeepSo Tools: Hello World
  * Plugin URI: https://peepso.com
  * Description: Plugin template for development of PeepSo addons
  * Author: PeepSo
