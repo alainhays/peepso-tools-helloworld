@@ -9,7 +9,7 @@
  * Copyright: (c) 2015 PeepSo All Rights Reserved.
  * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: peepsohelloworld
+ * Text Domain: peepso-hello-world
  * Domain Path: /language
  *
  * This software contains GPLv2 or later software courtesy of PeepSo.com, Inc
@@ -126,8 +126,8 @@ class PeepSoHelloworld
 
 	public function enqueue_scripts()
 	{
-		wp_enqueue_style('peepsohelloworld', plugin_dir_url(__FILE__) . 'assets/css/helloworld.css', array('peepso'), self::PLUGIN_VERSION, 'all');
-		wp_enqueue_script('peepsohelloworld', plugin_dir_url(__FILE__) . 'assets/js/helloworld.js', array('peepso'), self::PLUGIN_VERSION, TRUE);
+		wp_enqueue_style('peepso-hello-world', plugin_dir_url(__FILE__) . 'assets/css/helloworld.css', array('peepso'), self::PLUGIN_VERSION, 'all');
+		wp_enqueue_script('peepso-hello-world', plugin_dir_url(__FILE__) . 'assets/js/helloworld.js', array('peepso'), self::PLUGIN_VERSION, TRUE);
 	}
 
 	public function register_widgets($widgets)
@@ -156,7 +156,7 @@ class PeepSoHelloworld
 	{
 		$tabs['red']['helloworld'] = array(
 			'slug' => 'peepso-hello-world',
-			'menu' => __('Hello World', 'peepsohelloworld'),
+			'menu' => __('Hello World', 'peepso-hello-world'),
 			'icon' => 'info',
 			'function' => array(&$this, 'admin_page'),
 		);
@@ -174,9 +174,9 @@ class PeepSoHelloworld
 	public function admin_config_tabs( $tabs )
 	{
 		$tabs['helloworld'] = array(
-			'label' => __('Hello World Tab', 'peepsohelloworld'),
+			'label' => __('Hello World Tab', 'peepso-hello-world'),
 			'tab' => 'helloworld',
-			'description' => __('Example Config Tab', 'peepsohelloworld'),
+			'description' => __('Example Config Tab', 'peepso-hello-world'),
 			'function' => 'PeepSoConfigSectionHelloworld',
 		);
 

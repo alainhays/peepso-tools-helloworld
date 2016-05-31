@@ -1,14 +1,14 @@
 <?php
 
 
-class PeepSoHelloWidgetHello extends WP_Widget
+class PeepSoHelloworldWidgetHelloworld extends WP_Widget
 {
 
 	public function __construct( $id = NULL, $name = NULL, $args= NULL ) {
 
-		$id     = ( NULL !== $id )  ? $id   : 'PeepSoHelloWidgetHello';
-		$name   = ( NULL !== $name )? $name : __('PeepSo Hello World', 'peepsohello');
-		$args   = ( NULL !== $args )? $args : array('description' => __('Hello World!', 'peepsohello'),);
+		$id     = ( NULL !== $id )  ? $id   : 'PeepSoHelloworldWidgetHelloworld';
+		$name   = ( NULL !== $name )? $name : __('PeepSo Hello World', 'peepso-hello-world');
+		$args   = ( NULL !== $args )? $args : array('description' => __('Hello World!', 'peepso-hello-world'),);
 
 		parent::__construct(
 			$id,

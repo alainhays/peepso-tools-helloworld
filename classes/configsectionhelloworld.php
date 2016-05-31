@@ -20,9 +20,9 @@ class PeepSoConfigSectionHelloworld extends PeepSoConfigSectionAbstract
 	{
 		// Add "options" parameter (array) to the next field
 		$options = array(
-			'left' => __('Left', 'peepsohelloworld'),
-			'center' => __('Center', 'peepsohelloworld'),
-			'right' => __('Right', 'peepsohelloworld'),
+			'left' => __('Left', 'peepso-hello-world'),
+			'center' => __('Center', 'peepso-hello-world'),
+			'right' => __('Right', 'peepso-hello-world'),
 		);
 
 		// args(key, value)
@@ -31,7 +31,7 @@ class PeepSoConfigSectionHelloworld extends PeepSoConfigSectionAbstract
 		// set_field() will take all previously set args and reset them after the field is rendered
 		$this->set_field(
 			'peepso_helloworld_align',
-			__('Message alignment', 'peepsohelloworld'),
+			__('Message alignment', 'peepso-hello-world'),
 			'select'
 		);
 
@@ -45,13 +45,13 @@ class PeepSoConfigSectionHelloworld extends PeepSoConfigSectionAbstract
 		// Once again the args will be included automatically. Note that args set before previous field are gone
 		$this->set_field(
 			'peepso_helloworld_exclamation_marks',
-			__('Number of exclamation marks', 'peepsohelloworld'),
+			__('Number of exclamation marks', 'peepso-hello-world'),
 			'text'
 		);
 
 		$this->set_group(
 			'peepso_helloworld_general',
-			__('General', 'peepsohelloworld')
+			__('General', 'peepso-hello-world')
 		);
 	}
 
@@ -63,7 +63,7 @@ class PeepSoConfigSectionHelloworld extends PeepSoConfigSectionAbstract
 		// # Message Custom Greeting
 		$this->set_field(
 			'peepso_helloworld_use_custom_message',
-			__('Switch this on to enable the custom greeting in the frontend','peepsohelloworld'),
+			__('Switch this on to enable the custom greeting in the frontend','peepso-hello-world'),
 			'message'
 		);
 
@@ -71,20 +71,20 @@ class PeepSoConfigSectionHelloworld extends PeepSoConfigSectionAbstract
 		// # Use Custom Greeting
 		$this->set_field(
 			'peepso_helloworld_use_custom',
-			__('Use Custom Greeting', 'peepsohelloworld'),
+			__('Use Custom Greeting', 'peepso-hello-world'),
 			'yesno_switch'
 		);
 
 		$this->set_field(
 			'peepso_helloworld_custom_message',
-			__('Custom Greeting', 'peepsohelloworld'),
+			__('Custom Greeting', 'peepso-hello-world'),
 			'text'
 		);
 
 
 		$this->set_group(
 			'peepso_helloworld_custom_greeting',
-			__('Customize Greeting Message', 'peepsohelloworld')
+			__('Customize Greeting Message', 'peepso-hello-world')
 		);
 	}
 }

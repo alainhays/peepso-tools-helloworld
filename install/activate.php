@@ -55,7 +55,7 @@ class PeepSoHelloInstall extends PeepSoInstall
 		// default page names/locations
 		$aRet = array(
 			'hello' => array(
-				'title' => __('PeepSo Hello World', 'peepsohello'),
+				'title' => __('PeepSo Hello World', 'peepso-hello-world'),
 				'slug' => 'helloworld',
 				'content' => '[peepso_hello]'
 			),
