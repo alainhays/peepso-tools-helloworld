@@ -5,7 +5,7 @@
  * Description: Plugin template for development of PeepSo addons
  * Author: PeepSo
  * Author URI: https://peepso.com
- * Version: 1.5.7
+ * Version: 1.6.0
  * Copyright: (c) 2015 PeepSo All Rights Reserved.
  * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -30,7 +30,7 @@ class PeepSoHelloworld
 	private static $_instance = NULL;
 
 	const PLUGIN_NAME	 = 'PeepSo Hello World';
-	const PLUGIN_VERSION = '1.5.7';
+	const PLUGIN_VERSION = '1.6.0';
 	const PLUGIN_RELEASE = ''; //ALPHA1, BETA1, RC1, '' for STABLE
 
 	public $widgets = array(
@@ -126,8 +126,8 @@ class PeepSoHelloworld
 
 	public function enqueue_scripts()
 	{
-		wp_enqueue_style('peepsohelloworld', plugin_dir_url(__FILE__) . 'assets/helloworld.css', array('peepso'), self::PLUGIN_VERSION, 'all');
-		wp_enqueue_script('peepsohelloworld', plugin_dir_url(__FILE__) . 'assets/helloworld.js', array('peepso'), self::PLUGIN_VERSION, TRUE);
+		wp_enqueue_style('peepsohelloworld', plugin_dir_url(__FILE__) . 'assets/css/helloworld.css', array('peepso'), self::PLUGIN_VERSION, 'all');
+		wp_enqueue_script('peepsohelloworld', plugin_dir_url(__FILE__) . 'assets/js/helloworld.js', array('peepso'), self::PLUGIN_VERSION, TRUE);
 	}
 
 	public function register_widgets($widgets)
