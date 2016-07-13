@@ -102,7 +102,6 @@ class PeepSoHelloworld
 		}
 
 		require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'install' . DIRECTORY_SEPARATOR . 'activate.php');
-		require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'classes' . DIRECTORY_SEPARATOR . 'friendsshortcode.php');
 		$install = new PeepSoHelloInstall();
 		$res = $install->plugin_activation();
 		if (FALSE === $res) {
