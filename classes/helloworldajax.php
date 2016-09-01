@@ -19,7 +19,7 @@ class PeepSoHelloworldAjax implements PeepSoAjaxCallback
 		$peepsoInput = new PeepSoInput();
 		#$peepsoActivity = PeepSoActivity::get_instance();
 
-		#$user_id = PeepSo::get_user_id();
+		#$user_id = get_current_user_id();
 		#$peepsoActivity->set_user_id($user_id);
 
 		$hello = $peepsoInput->get_int('hello', 'hello');
