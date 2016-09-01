@@ -45,7 +45,7 @@ class PeepSoHelloworld
 	 * your plugin will be treated as in strict version lock, similar to all the Core plugins
 	 */
 	const PEEPSO_VER_MIN = '1.6.0';
-	const PEEPSO_VER_MAX = '1.6.3';
+	const PEEPSO_VER_MAX = '1.7.0';
 
 	public $widgets = array(
 		'PeepSoHelloworldWidgetHelloworld',
