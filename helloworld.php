@@ -5,7 +5,7 @@
  * Description: Plugin template for development of PeepSo addons
  * Author: PeepSo
  * Author URI: https://peepso.com
- * Version: 1.7.1
+ * Version: 2.0.2
  * Copyright: (c) 2015 PeepSo All Rights Reserved.
  * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
