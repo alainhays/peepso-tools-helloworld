@@ -30,7 +30,7 @@ class PeepSoHelloworld
 	private static $_instance = NULL;
 
 	const PLUGIN_NAME	 = 'PeepSo Hello World';
-	const PLUGIN_VERSION = '1.7.1';
+	const PLUGIN_VERSION = '2.0.2';
 	const PLUGIN_RELEASE = ''; //ALPHA1, BETA1, RC1, '' for STABLE
 
 	/*
@@ -44,7 +44,7 @@ class PeepSoHelloworld
 	 * If you do not define these two constants and hook into peepso_all_plugins anyway
 	 * your plugin will be treated as in strict version lock, similar to all the Core plugins
 	 */
-	const PEEPSO_VER_MIN = '1.6.0';
+	const PEEPSO_VER_MIN = '1.7.0';
 	const PEEPSO_VER_MAX = '1.7.1';
 
 	public $widgets = array(
