@@ -5,32 +5,24 @@
  * Description: Plugin template for development of PeepSo addons
  * Author: PeepSo
  * Author URI: https://peepso.com
- * Version: 2.0.6
- * Copyright: (c) 2015 PeepSo All Rights Reserved.
+ * Version: 2.0.8
+ * Copyright: (c) 2015 PeepSo LLP. All Rights Reserved.
  * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain: peepso-hello-world
  * Domain Path: /language
  *
- * This software contains GPLv2 or later software courtesy of PeepSo.com, Inc
- *
- * PeepSoHelloWorld is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as published by
- * the Free Software Foundation, either version 2 of the License, or
- * any later version.
- *
- * PeepSoHelloWorld is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY. See the
- * GNU General Public License for more details.
+ * We are Open Source. You can redistribute and/or modify this software under the terms of the GNU General Public License (version 2 or later)
+ * as published by the Free Software Foundation. See the GNU General Public License or the LICENSE file for more details.
+ * This software is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY.
  */
-
 
 class PeepSoHelloworld
 {
 	private static $_instance = NULL;
 
 	const PLUGIN_NAME	 = 'PeepSo Hello World';
-	const PLUGIN_VERSION = '2.0.6';
+	const PLUGIN_VERSION = '2.0.8';
 	const PLUGIN_RELEASE = ''; //ALPHA1, BETA1, RC1, '' for STABLE
 
 	/*
@@ -45,7 +37,7 @@ class PeepSoHelloworld
 	 * your plugin will be treated as in strict version lock, similar to all the Core plugins
 	 */
 	const PEEPSO_VER_MIN = '1.7.0';
-	const PEEPSO_VER_MAX = '1.7.5';
+	const PEEPSO_VER_MAX = '1.7.6';
 
 	public $widgets = array(
 		'PeepSoHelloworldWidgetHelloworld',
