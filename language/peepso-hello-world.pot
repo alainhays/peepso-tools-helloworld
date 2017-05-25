@@ -1,0 +1,103 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: PeepSo Tools: Hello World\n"
+"POT-Creation-Date: 2017-05-25 11:45+0700\n"
+"PO-Revision-Date: 2017-05-25 11:45+0700\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.12\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: helloworld.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: classes/configsectionhelloworld.php:23
+msgid "Left"
+msgstr ""
+
+#: classes/configsectionhelloworld.php:24
+msgid "Center"
+msgstr ""
+
+#: classes/configsectionhelloworld.php:25
+msgid "Right"
+msgstr ""
+
+#: classes/configsectionhelloworld.php:34
+msgid "Message alignment"
+msgstr ""
+
+#: classes/configsectionhelloworld.php:48
+msgid "Number of exclamation marks"
+msgstr ""
+
+#: classes/configsectionhelloworld.php:54
+msgid "General"
+msgstr ""
+
+#: classes/configsectionhelloworld.php:66
+msgid "Switch this on to enable the custom greeting in the frontend"
+msgstr ""
+
+#: classes/configsectionhelloworld.php:74
+msgid "Use Custom Greeting"
+msgstr ""
+
+#: classes/configsectionhelloworld.php:80
+msgid "Custom Greeting"
+msgstr ""
+
+#: classes/configsectionhelloworld.php:87
+msgid "Customize Greeting Message"
+msgstr ""
+
+#: classes/widgets/widgethelloworld.php:10 install/activate.php:58
+msgid "PeepSo Hello World"
+msgstr ""
+
+#: classes/widgets/widgethelloworld.php:11
+msgid "Hello World!"
+msgstr ""
+
+#: helloworld.php:134
+#, php-format
+msgid "The %s plugin requires the PeepSo plugin to be installed and activated."
+msgstr ""
+
+#: helloworld.php:181
+msgid "Hello World"
+msgstr ""
+
+#: helloworld.php:199
+msgid "Hello World Tab"
+msgstr ""
+
+#: helloworld.php:201
+msgid "Example Config Tab"
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "PeepSo Tools: Hello World"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+#. Author URI of the plugin/theme
+msgid "https://peepso.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "Plugin template for development of PeepSo addons"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "PeepSo"
+msgstr ""
