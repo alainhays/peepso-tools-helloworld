@@ -5,7 +5,7 @@
  * Description: Plugin template for development of PeepSo addons
  * Author: PeepSo
  * Author URI: https://peepso.com
- * Version: 3.0.3
+ * Version: 3.0.4
  * Copyright: (c) 2015 PeepSo, Inc. All Rights Reserved.
  * License: GPLv2 or later
  * License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -22,7 +22,7 @@ class PeepSoHelloworld
 	private static $_instance = NULL;
 
 	const PLUGIN_NAME	 = 'PeepSo Hello World';
-	const PLUGIN_VERSION = '3.0.3';
+	const PLUGIN_VERSION = '3.0.4';
 	const PLUGIN_RELEASE = ''; //ALPHA1, BETA1, RC1, '' for STABLE
 
 	/*
@@ -37,7 +37,7 @@ class PeepSoHelloworld
 	 * your plugin will be treated as in strict version lock, similar to all the Core plugins
 	 */
 	const PEEPSO_VER_MIN = '1.8.0';
-	const PEEPSO_VER_MAX = '1.8.3';
+	const PEEPSO_VER_MAX = '1.8.4';
 
 	public $widgets = array(
 		'PeepSoHelloworldWidgetHelloworld',
