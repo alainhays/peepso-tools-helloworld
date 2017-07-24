@@ -129,7 +129,7 @@ class PeepSoHelloworld
 	public function peepso_disabled_notice()
 	{
 		?>
-		<div class="error fade">
+		<div class="error peepso">
 			<strong>
 				<?php echo sprintf(__('The %s plugin requires the PeepSo plugin to be installed and activated.', 'peepso-hello-world'), self::PLUGIN_NAME);?>
 			</strong>
