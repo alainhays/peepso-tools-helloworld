@@ -197,6 +197,7 @@ class PeepSoHelloworld
 	{
 		$tabs['helloworld'] = array(
 			'label' => __('Hello World Tab', 'peepso-hello-world'),
+            'icon' => 'https://www.peepso.com/wp-content/plugins/peepso.com-checkout/assets/icons/peepso_icon.svg',
 			'tab' => 'helloworld',
 			'description' => __('Example Config Tab', 'peepso-hello-world'),
 			'function' => 'PeepSoConfigSectionHelloworld',
